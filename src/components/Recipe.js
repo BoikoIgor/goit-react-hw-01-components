@@ -35,5 +35,13 @@ export const Recipe = ({ item: { name, image, time, servings, calories } }) => {
 };
 
 Recipe.propTypes = {
-  item: PropTypes.shape,
+  item: PropTypes.shape({
+    // id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    time: PropTypes.string.isRequired,
+    servings: PropTypes.number.isRequired,
+    calories: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
+    // difficulty: PropTypes.oneOf(['easy', 'medium', 'hard']).isRequired,
+  }).isRequired,
 };
