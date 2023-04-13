@@ -6,17 +6,18 @@ import data from './Statistics/data.json';
 import { Statistics } from './Statistics/Statistics';
 import friends from './FriendList/friends.json';
 import { FriendList } from './FriendList/FriendList';
+import transactions from './TransactionHistory/transactions.json';
+import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 
-// console.log(user);
-// console.log(friends);
+// console.log(transactions);
 export const App = () => {
   return (
-    <div
+    <article
       style={{
         height: '100vh',
-        // display: 'flex',
-        // justifyContent: 'center',
-        // alignItems: 'center',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         fontSize: 16,
         color: '#010101',
       }}
@@ -31,6 +32,7 @@ export const App = () => {
       <Statistics title="Upload stats" stats={data} />
       {/* <Statistics stats={data} /> */}
       <FriendList friends={friends} />;
-    </div>
+      <TransactionHistory items={transactions} />;
+    </article>
   );
 };
