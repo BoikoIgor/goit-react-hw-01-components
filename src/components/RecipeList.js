@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import { Recipe } from './Recipe';
+import { RecipeCard } from './RecipeCard';
 export const RecipeList = ({ items }) => {
   return (
-    <ul style={{ display: 'flex', gap: 16 }}>
+    <ul style={{ display: 'flex', gap: 8 }}>
       {items.map(item => (
         <li key={item.id}>
-          <Recipe item={item} />
+          <RecipeCard item={item} />
         </li>
       ))}
     </ul>

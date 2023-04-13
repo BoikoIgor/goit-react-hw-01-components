@@ -3,12 +3,14 @@ import { BsAlarm } from 'react-icons/bs';
 import { AiOutlinePieChart } from 'react-icons/ai';
 import { HiOutlineChartBar } from 'react-icons/hi';
 
-export const Recipe = ({ item: { name, image, time, servings, calories } }) => {
+export const RecipeCard = ({
+  item: { name, image, time, servings, calories },
+}) => {
   return (
     <section>
       <img src={image} alt={name} width="240" />
       <h2>{name}</h2>
-      <div>
+      <div style={{ display: 'flex', gap: 8 }}>
         <div>
           <BsAlarm />
           {time} min
@@ -34,7 +36,7 @@ export const Recipe = ({ item: { name, image, time, servings, calories } }) => {
   );
 };
 
-Recipe.propTypes = {
+RecipeCard.propTypes = {
   item: PropTypes.shape({
     // id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
