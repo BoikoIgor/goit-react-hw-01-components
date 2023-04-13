@@ -1,6 +1,6 @@
 // import { RecipeList } from './RecipeList';
 // import recipes from '../recipes.json';
-import user from '../user.json';
+import user from './Profile/user.json';
 import { Profile } from './Profile/Profile';
 // console.log(user);
 export const App = () => {
