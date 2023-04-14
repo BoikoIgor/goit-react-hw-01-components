@@ -6,6 +6,7 @@ export const ProfileContainer = styled.div`
   color: ${props => props.theme.colors.grey};
   overflow: hidden;
   margin: 1rem;
+  width: 15rem;
   box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
 `;
 
