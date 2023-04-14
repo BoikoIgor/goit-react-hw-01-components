@@ -6,6 +6,7 @@ export const StatsWrap = styled.section`
   color: ${props => props.theme.colors.black};
   box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
   margin: 1rem;
+  width: 35rem;
   overflow: hidden;
 `;
 export const Title = styled.div`
