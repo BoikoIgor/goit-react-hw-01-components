@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { StatsWrap, Title, StatsList, StatsItem } from './Statistics.styled';
 
 function getRandomColor() {
   // Генеруємо випадкове шістнадцяткове число для кольору
@@ -13,29 +14,24 @@ function getRandomColor() {
 export const Statistics = ({ title, stats }) => {
   //   console.log(stats);
   return (
-    <section className="statistics">
-      {title && (
-        <h2 key={title} className="title">
-          {title}
-        </h2>
-      )}
-      <ul className="stat-list">
+    <StatsWrap>
+      {title && <Title key={title}>{title.toUpperCase()}</Title>}
+      <StatsList>
         {stats.map(({ id, label, percentage }) => {
           return (
-            <li
+            <StatsItem
               key={id}
-              className="item"
               style={{
                 backgroundColor: getRandomColor(),
               }}
             >
               <span className="label">{label}</span>
               <span className="percentage">{percentage}%</span>
-            </li>
+            </StatsItem>
           );
         })}
-      </ul>
-    </section>
+      </StatsList>
+    </StatsWrap>
   );
 };
 

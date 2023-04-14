@@ -20,8 +20,8 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
 
       <StatsList>
         <StatsItem>
-          <span className="label">Followers</span>
-          <span className="quantity">
+          <span>Followers</span>
+          <span>
             <b>{stats.followers.toLocaleString('en-US')}</b>
           </span>
         </StatsItem>

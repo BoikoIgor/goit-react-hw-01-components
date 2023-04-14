@@ -14,10 +14,11 @@ export const App = () => {
   return (
     <article
       style={{
-        height: '100vh',
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        padding: '1rem',
         fontSize: 16,
         color: '#010101',
         background: '#bfbfbf',
@@ -31,7 +32,7 @@ export const App = () => {
         stats={user.stats}
       />
       <Statistics title="Upload stats" stats={data} />
-      {/* <Statistics stats={data} /> */}
+      <Statistics stats={data} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
     </article>

@@ -5,6 +5,8 @@ export const ProfileContainer = styled.div`
   border-radius: 0.3rem;
   color: ${props => props.theme.colors.grey};
   overflow: hidden;
+  margin: 1rem;
+  box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
 `;
 
 export const Description = styled.div`
@@ -57,13 +59,5 @@ export const StatsItem = styled.li`
   }
   & b {
     color: ${props => props.theme.colors.black};
-    ::after {
-      content: attr(data-value);
-      counter-reset: comma;
-    }
-    ::before {
-      content: counter(comma, ',') ' ';
-      counter-increment: comma 3;
-    }
   }
 `;
