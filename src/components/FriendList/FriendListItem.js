@@ -8,7 +8,7 @@ import {
 
 export const FriendListItem = ({ friend: { avatar, name, isOnline, id } }) => {
   return (
-    <FriendsItem key={id}>
+    <FriendsItem>
       <StatusOnline style={{ background: isOnline ? 'green' : 'red' }}>
         {isOnline}
       </StatusOnline>
